@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bill_number: 1
+  customer: one
+  date: 2018-12-31 09:23:27
+  discount: 1.5
+  payment_type: MyString
+  amount: 1.5
+
+two:
+  bill_number: 1
+  customer: two
+  date: 2018-12-31 09:23:27
+  discount: 1.5
+  payment_type: MyString
+  amount: 1.5
