@@ -10,6 +10,30 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">Billing Application</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapsable">
+          <ul class="nav navbar-nav foo" id="menu">
+            <li><%= link_to "User", users_path %>
+            <li><%= link_to "Customer", customers_path %></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_user %>
+              <li>
+                <a class="btn btn-outline-primary" href="/logout" role="button">Logout</a>
+              </li>
+            <% else %>
+              <li><a class="btn btn-outline-primary" href="/login" role="button">Login</a></li>
+              <li><a class="btn btn-outline-success" href="/signup" role="button">Sign Up</a></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

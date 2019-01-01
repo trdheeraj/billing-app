@@ -27,9 +27,15 @@ gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-# For styling
-gem 'bootstrap'
+# Styling
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'rails_bootstrap_navbar'
+
+# Pagination
 gem 'jquery-rails'
+gem 'will_paginate', '3.1.6'
+gem 'bootstrap-will_paginate', '1.0.0'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

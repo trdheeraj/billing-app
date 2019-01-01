@@ -1,0 +1,50 @@
+<div class="container text-center">
+	<% if notice %>
+		<div class="alert alert-success" role="alert">
+		  <p id="notice"><%= notice %></p>
+		</div>
+	<% end %>
+
+	<p>
+	  <strong>Name:</strong>
+	  <%= @customer.name %>
+	</p>
+
+	<p>
+	  <strong>Email:</strong>
+	  <%= @customer.email %>
+	</p>
+
+	<p>
+	  <strong>Mobile:</strong>
+	  <%= @customer.mobile %>
+	</p>
+
+	<p>
+	  <strong>Address Line 1:</strong>
+	  <%= @customer.address.address_1 %>
+	</p>
+
+	<p>
+	  <strong>Address Line 1:</strong>
+	  <%= @customer.address.address_2 %>
+	</p>
+
+	<p>
+	  <strong>District:</strong>
+	  <%= @customer.address.district %>
+	</p>
+
+	<p>
+	  <strong>State:</strong>
+	  <%= @customer.address.state %>
+	</p>
+
+	<p>
+	  <strong>Postal Code:</strong>
+	  <%= @customer.address.postal_code %>
+	</p>
+
+	<%= link_to 'Edit', edit_customer_path(@customer) %> |
+	<%= link_to 'Back', customers_path %>
+</div>

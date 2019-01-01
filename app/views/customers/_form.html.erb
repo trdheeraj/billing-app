@@ -1,0 +1,55 @@
+<div class="container">
+  <%= form_with(model: customer, local: true) do |form| %>
+    <% if address.errors.any? %>
+      <%= render partial: "shared/warnings", locals: {warning: address} %>
+    <% end %>
+
+    <% if customer.errors.any? %>
+      <%= render partial: "shared/warnings", locals: {warning: customer} %>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, { class: 'form-control', placeholder: "Enter Customer Name", value: customer.name } %>
+    </div>
+
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email, { class: 'form-control', placeholder: "Enter email", value: customer.email } %>
+    </div>
+
+    <div class="field">
+      <%= form.label :mobile %>
+      <%= form.text_field :mobile, { class: 'form-control', placeholder: "Enter Mobile", value: customer.mobile } %>
+    </div>
+
+    <div class="field">
+      <%= form.label :address_1 %>
+      <%= form.text_field :address_1, { class: 'form-control', placeholder: "Address Line 1", value: customer&.address&.address_1 } %>
+    </div>
+
+    <div class="field">
+      <%= form.label :address_2 %>
+      <%= form.text_field :address_2, { class: 'form-control', placeholder: "Address Line 2", value: customer&.address&.address_2 } %>
+    </div>
+
+    <div class="field">
+      <%= form.label :district %>
+      <%= form.text_field :district, { class: 'form-control', placeholder: "District", value: customer&.address&.district } %>
+    </div>
+
+    <div class="field">
+      <%= form.label :state %>
+      <%= form.text_field :state, { class: 'form-control', placeholder: "Select State", value: customer&.address&.state } %>
+    </div>
+
+    <div class="field">
+      <%= form.label :postal_code %>
+      <%= form.text_field :postal_code, { class: 'form-control', placeholder: "Enter Postal Code", value: customer&.address&.postal_code } %>
+    </div>  
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+  <% end %>  
+</div>
