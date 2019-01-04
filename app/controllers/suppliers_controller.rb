@@ -25,8 +25,8 @@ class SuppliersController < ApplicationController
 
 		respond_to do |format|
 			if @address.save
+				@supplier.address = @address
 				if @supplier.save
-					@supplier.address = @address
 					format.html { redirect_to @supplier, notice: 'Supplier was successfully created.' }
 					format.json { render :show, status: :created, location: @supplier }
 				else

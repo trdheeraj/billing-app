@@ -25,8 +25,8 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
     	if @address.save
+    	  @customer.address = @address
 	      if @customer.save
-	      	@customer.address = @address
 	        format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
 	        format.json { render :show, status: :created, location: @customer }
 	      else
