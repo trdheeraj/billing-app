@@ -1,0 +1,50 @@
+<div class="container text-center">
+	<% if notice %>
+		<div class="alert alert-success" role="alert">
+		  <p id="notice"><%= notice %></p>
+		</div>
+	<% end %>
+
+	<p>
+	  <strong>Name:</strong>
+	  <%= @supplier.name %>
+	</p>
+
+	<p>
+	  <strong>Email:</strong>
+	  <%= @supplier.email %>
+	</p>
+
+	<p>
+	  <strong>Mobile:</strong>
+	  <%= @supplier.mobile %>
+	</p>
+
+	<p>
+	  <strong>Address Line 1:</strong>
+	  <%= @supplier.address.address_1 %>
+	</p>
+
+	<p>
+	  <strong>Address Line 1:</strong>
+	  <%= @supplier.address.address_2 %>
+	</p>
+
+	<p>
+	  <strong>District:</strong>
+	  <%= @supplier.address.district %>
+	</p>
+
+	<p>
+	  <strong>State:</strong>
+	  <%= @supplier.address.state %>
+	</p>
+
+	<p>
+	  <strong>Postal Code:</strong>
+	  <%= @supplier.address.postal_code %>
+	</p>
+
+	<%= link_to 'Edit', edit_supplier_path(@supplier) %> |
+	<%= link_to 'Back', suppliers_path %>
+</div>
